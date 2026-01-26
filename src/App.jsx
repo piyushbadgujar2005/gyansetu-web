@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
+import LoadingPage from './components/Loadingpage';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -22,8 +23,15 @@ const ScrollToTop = () => {
 };
 
 function AppContent() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className="antialiased min-h-screen bg-theme-light-bg dark:bg-brand-dark transition-colors duration-300">
+      {isLoading && <LoadingPage onComplete={handleLoadingComplete} />}
       <ScrollToTop />
       <Navbar />
       <main>
@@ -59,3 +67,4 @@ function App() {
 }
 
 export default App;
+

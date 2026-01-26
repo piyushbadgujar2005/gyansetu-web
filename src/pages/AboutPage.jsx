@@ -7,32 +7,32 @@ const AboutPage = () => {
 
   const teamMembers = [
     {
-      name: "Rajesh Kumar",
-      designation: "Founder & CEO",
-      qualification: "M.Tech IIT Delhi, MBA",
-      image: "/team_member_1_1769020896614.png",
-      description: "Visionary leader with 15+ years in EdTech innovation"
+      name: "Adv. Abhay A. Kulkarni",
+      designation: "Director",
+      qualification: "B.Sc., LL.M., MBA (H.R.), C.P.C.T.",
+      image: "https://res.cloudinary.com/dweebldig/image/upload/v1751826586/Director_image_j167br.jpg",
+      description: "Director, Gyansetu Global Growth Pvt. Ltd. & Waves Classes, Jalgaon | Trustee, Shikshan Prasarak Mandal | Chartered Secretary, Rotary Club of Jalgaon Green City"
     },
     {
-      name: "Priya Sharma",
-      designation: "Chief Technology Officer",
-      qualification: "B.Tech IIT Bombay, MS Stanford",
-      image: "/team_member_2_1769020914426.png",
-      description: "Technology expert specializing in AI-driven learning platforms"
+      name: "Sagar M. Patil",
+      designation: "Director",
+      qualification: "B.Tech (Information Technology), VIT",
+      image: "https://res.cloudinary.com/dweebldig/image/upload/v1769421070/sagar_sir_ywruow.jpg",
+      description: "Founder & Director at Spectrum Classes, Educator at Vision Classes, and Private Home Tutor in Navi Mumbai"
     },
     {
-      name: "Arjun Patel",
-      designation: "Content Director",
-      qualification: "M.Ed, B.Sc Mathematics",
-      image: "/team_member_3_1769020933054.png",
-      description: "Curriculum designer with expertise in experiential learning"
+      name: "Pushpendra Singh Rathore",
+      designation: "Director",
+      qualification: "B.Tech (Mechanical Engineering), KNIT",
+      image: "https://res.cloudinary.com/dweebldig/image/upload/v1769421600/sir_zjfntp.jpg",
+      description: "Engineer & Educator with 12+ years of experience, teaching Physics, Mathematics, and Logical Reasoning for IIT-JEE, NEET, CAT, Banking, and SSC aspirants."
     },
     {
-      name: "Sneha Reddy",
-      designation: "UX/Design Lead",
-      qualification: "M.Des NID, B.Arch",
-      image: "/team_member_4_1769020952754.png",
-      description: "Creative designer focused on intuitive educational experiences"
+      name: "Abhijit Balwant Patil",
+      designation: "Director",
+      qualification: "M.A. in Mass Communication, B.A. (Sociology)",
+      image: "https://res.cloudinary.com/dweebldig/image/upload/v1769446615/e5ab2613-d6a3-420e-b316-e35ad4e4f56c_tswzoz.jpg",
+      description: "Sub-Editor & Reporter at Lokmat since 2011, former Video Journalist at IBN Lokmat, LAADLI Media Award (UNFPA) winner, with experience in news coverage, camerawork, and social awareness initiatives"
     }
   ];
 

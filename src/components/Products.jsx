@@ -57,7 +57,7 @@ const Products = () => {
         <div className="space-y-12 sm:space-y-16 md:space-y-24 lg:space-y-32">
           <div className="eco-block-1 group grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center">
             <div className="eco-content px-2 sm:px-0">
-              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-theme-light-heading dark:text-white">MathLab</div>
+              <div className="text-[3vw] font-bold text-theme-light-heading dark:text-white">Math<span className="text-[#EA9010]">Lab</span></div>
               <div className="mt-2 text-sm sm:text-base md:text-lg text-theme-light-body dark:text-theme-dark-body">Math is not memorization. It's understanding.</div>
               <p className="mt-3 sm:mt-4 md:mt-6 text-xs sm:text-sm md:text-base leading-relaxed text-theme-light-body dark:text-theme-dark-body">
                 MathLab helps students visualize concepts, practice hands-on learning, and build strong foundations through experiential mathematics.
@@ -97,7 +97,7 @@ const Products = () => {
               </div>
             </div>
             <div className="eco-content px-2 sm:px-0">
-              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-theme-light-heading dark:text-white">Interactive Boards</div>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-theme-light-heading dark:text-white">Interactive <span className="text-[#EA9010]">Boards</span></div>
               <div className="mt-2 sm:mt-3 text-base sm:text-lg md:text-xl text-theme-light-body dark:text-theme-dark-body">Turn classrooms into smart learning spaces</div>
               <p className="mt-3 sm:mt-4 md:mt-6 text-sm sm:text-base md:text-lg leading-relaxed text-theme-light-body dark:text-theme-dark-body">
                 Interactive Boards combine touch, multimedia, and smart tools to enhance teacher delivery and student engagement.
