@@ -25,13 +25,19 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((item) => (
-              <a 
+              <Link 
                 key={item} 
-                href={getLink(item)} 
+                to={getLink(item)} 
                 className="text-sm font-medium uppercase tracking-widest text-theme-light-body dark:text-theme-dark-body hover:text-brand-orange dark:hover:text-brand-orange transition-colors"
+                onClick={(e) => {
+                  if (item !== 'Home' && window.location.pathname === '/') {
+                    e.preventDefault();
+                    document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 {item}
-              </a>
+              </Link>
             ))}
             
             <button 
@@ -59,14 +65,20 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden absolute top-20 left-0 w-full bg-theme-light-bg dark:bg-theme-dark-bg shadow-xl border-t border-gray-100 dark:border-gray-800 p-6 flex flex-col space-y-4">
            {navLinks.map((item) => (
-              <a 
+              <Link 
                 key={item} 
-                href={getLink(item)} 
+                to={getLink(item)} 
                 className="text-lg font-medium text-theme-light-heading dark:text-theme-dark-heading hover:text-brand-orange"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  setIsOpen(false);
+                  if (item !== 'Home' && window.location.pathname === '/') {
+                    e.preventDefault();
+                    document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 {item}
-              </a>
+              </Link>
             ))}
         </div>
       )}

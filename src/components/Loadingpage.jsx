@@ -15,17 +15,7 @@ const LoadingPage = ({ onComplete }) => {
   useGSAP(() => {
     if (!containerRef.current) return;
 
-    const tl = gsap.timeline({
-      onComplete: () => {
-        // Elegant curtain exit
-        gsap.to(containerRef.current, {
-          yPercent: -100,
-          duration: 0.8,
-          ease: "power3.inOut",
-          onComplete: onComplete,
-        });
-      }
-    });
+    const tl = gsap.timeline();
 
     // Initial states
     gsap.set(imageRef.current, { scale: 1.2, filter: "brightness(0.3)" });
@@ -95,6 +85,18 @@ const LoadingPage = ({ onComplete }) => {
 
     // Phase 8: Hold before exit
     tl.to({}, { duration: 0.3 });
+
+    // Final trigger for app to start Hero entrance while curtain lifts
+    tl.add(() => {
+      onComplete();
+    });
+
+    // Elegant curtain exit
+    tl.to(containerRef.current, {
+      yPercent: -100,
+      duration: 1,
+      ease: "power3.inOut",
+    });
 
   }, { scope: containerRef });
 
