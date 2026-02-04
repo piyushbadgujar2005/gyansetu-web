@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { Play, Box, Puzzle, Brain, BookOpen, CheckCircle, ArrowLeft, Download, Sparkles } from 'lucide-react';
+import { Play, Box, Puzzle, Brain, BookOpen, CheckCircle, ArrowLeft, Download, Sparkles, Monitor } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,7 +82,7 @@ const MathLabPage = () => {
           </button>
 
           <h1 className="hero-title text-7xl md:text-9xl font-black text-white mb-8 tracking-tighter leading-[0.85]">
-            Math<span className="text-brand-orange animate-pulse">Lab</span>
+            Math<span className="text-brand-orange">Lab</span>
           </h1>
           
           <p className="hero-description text-xl md:text-2xl font-medium text-white/80 max-w-3xl mx-auto leading-relaxed italic">
@@ -91,10 +91,15 @@ const MathLabPage = () => {
           </p>
 
           <div className="hero-description mt-12 flex justify-center gap-6">
-            <div className="flex -space-x-3">
-              {[1,2,3,4].map(i => (
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-brand-dark bg-gray-300 overflow-hidden">
-                  <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="user" />
+            <div className="flex -space-x-2">
+              {[
+                'https://images.unsplash.com/photo-1562774053-701939374585?w=100&h=100&fit=crop',
+                'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=100&h=100&fit=crop',
+                'https://images.unsplash.com/photo-1592280771190-3e2e4d571952?w=100&h=100&fit=crop',
+                'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=100&h=100&fit=crop'
+              ].map((img, i) => (
+                <div key={i} className="w-12 h-12 rounded-lg border-2 border-white/20 bg-white overflow-hidden shadow-lg">
+                  <img src={img} alt={`School ${i + 1}`} className="w-full h-full object-cover" />
                 </div>
               ))}
             </div>
@@ -139,56 +144,127 @@ const MathLabPage = () => {
           
           {/* Overview Tab */}
           {activeTab === 'overview' && (
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
-              <div className="space-y-12">
+            <div className="grid lg:grid-cols-5 gap-16 items-start">
+              {/* Main Content - Left Side */}
+              <div className="lg:col-span-3 space-y-10">
                 <div className="space-y-6">
-                  <h3 className="text-4xl md:text-5xl font-bold text-theme-light-heading dark:text-white tracking-tight">
-                    Beyond <span className="text-brand-orange">Calculations.</span>
+                  <h3 className="text-5xl md:text-6xl font-black text-theme-light-heading dark:text-white tracking-tight leading-tight">
+                    Transform Math into a <span className="text-brand-orange">Hands-On Experience</span>
                   </h3>
                   <p className="text-xl leading-relaxed text-theme-light-body dark:text-white/70 font-medium">
-                    MathLab is a comprehensive hands-on learning solution designed to bridge the gap between abstract mathematical concepts and real-world understanding. It provides a physical environment where students can touch, feel, and experiment with math.
+                    MathLab is a physical, activity-based mathematics learning system that helps students understand concepts through visualization, experimentation, and real-world interaction.
+                  </p>
+                  <p className="text-lg leading-relaxed text-theme-light-body dark:text-white/60">
+                    Instead of learning math only through textbooks and formulas, students engage with tangible tools that make abstract ideas in algebra, geometry, mensuration, number systems, and data handling become visible, touchable, and intuitive.
                   </p>
                 </div>
-                
-                <div className="grid md:grid-cols-2 gap-10">
-                  <div className="p-8 rounded-[2.5rem] bg-white dark:bg-white/[0.03] border border-brand-orange/20 shadow-xl">
-                    <h4 className="text-lg font-bold mb-3 text-brand-orange uppercase tracking-widest">Why MathLab?</h4>
-                    <p className="text-sm text-theme-light-body dark:text-white/60 leading-relaxed font-medium">To move beyond rote memorization and foster deep conceptual clarity through "learning by doing".</p>
-                  </div>
-                  <div className="p-8 rounded-[2.5rem] bg-white dark:bg-white/[0.03] border border-blue-500/20 shadow-xl">
-                    <h4 className="text-lg font-bold mb-3 text-blue-500 uppercase tracking-widest">Target Core</h4>
-                    <p className="text-sm text-theme-light-body dark:text-white/60 leading-relaxed font-medium">K-12 schools, progressive educators, and students who want to master math logic through active discovery.</p>
+
+                {/* What's Included Section */}
+                <div className="p-8 rounded-3xl bg-gradient-to-br from-brand-orange/5 to-amber-500/5 dark:from-brand-orange/10 dark:to-amber-500/10 border border-brand-orange/20">
+                  <h4 className="text-2xl font-bold mb-6 text-brand-orange flex items-center gap-3">
+                    <Box className="w-6 h-6" />
+                    What's Included
+                  </h4>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="flex gap-3 items-start">
+                      <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
+                      <span className="text-sm text-theme-light-body dark:text-white/70">Physical models for 2D/3D geometry and spatial reasoning</span>
+                    </div>
+                    <div className="flex gap-3 items-start">
+                      <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
+                      <span className="text-sm text-theme-light-body dark:text-white/70">Interactive tools for algebra, graphs, and patterns</span>
+                    </div>
+                    <div className="flex gap-3 items-start">
+                      <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
+                      <span className="text-sm text-theme-light-body dark:text-white/70">Activity kits for guided classroom experiments</span>
+                    </div>
+                    <div className="flex gap-3 items-start">
+                      <CheckCircle className="w-5 h-5 text-brand-orange flex-shrink-0 mt-1" />
+                      <span className="text-sm text-theme-light-body dark:text-white/70">Teacher manuals with curriculum-aligned activities</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-6 pt-4">
-                  <button className="px-10 py-5 bg-brand-orange text-white font-black text-xs uppercase tracking-widest rounded-2xl shadow-2xl hover:scale-105 transition-transform flex items-center gap-3">
+                {/* Demo Video Section */}
+                <div className="relative group rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl aspect-video border-2 border-brand-orange/20">
+                  <iframe 
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube.com/embed/N656hUmNuRU?si=YA2UTQcyPAC7pOC5" 
+                    title="MathLab Product Demo - YouTube video player" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen
+                  />
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-wrap gap-4">
+                  <button className="px-10 py-5 bg-brand-orange text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-2xl hover:scale-105 transition-transform flex items-center gap-3">
                     <Download className="w-5 h-5" />
                     <span>Download Brochure</span>
                   </button>
-                  <button className="px-10 py-5 bg-white dark:bg-white/5 border border-brand-orange/20 text-brand-orange font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-brand-orange/10 transition-colors">
+                  <button className="px-10 py-5 bg-white dark:bg-white/5 border-2 border-brand-orange text-brand-orange font-black text-sm uppercase tracking-widest rounded-2xl hover:bg-brand-orange hover:text-white transition-all">
                     Request Demo
                   </button>
                 </div>
               </div>
-              
-              {/* Cinematic Video Experience */}
-              <div className="relative group rounded-[3.5rem] overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.4)] aspect-video border border-white/10">
-                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" />
-                 <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px] transition-opacity duration-500 group-hover:opacity-40" />
-                 <div className="absolute inset-0 flex items-center justify-center z-10">
-                   <div className="w-24 h-24 rounded-full bg-brand-orange/90 flex items-center justify-center shadow-2xl shadow-brand-orange/50 hover:scale-110 transition-transform cursor-pointer">
-                     <Play className="w-10 h-10 text-white fill-current ml-2" />
-                   </div>
-                 </div>
-                 <div className="absolute bottom-10 left-10 z-20">
-                   <div className="px-5 py-2 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-white text-[10px] font-black uppercase tracking-widest mb-3">
-                     Experience Gyansetu
-                   </div>
-                   <p className="text-white text-xl font-bold">MathLab Learning Journey</p>
-                 </div>
+
+              {/* Sidebar - Right Side */}
+              <div className="lg:col-span-2 space-y-6">
+                {/* Designed For Card */}
+                <div className="p-8 rounded-3xl bg-white dark:bg-white/[0.03] border border-blue-500/20 shadow-2xl sticky top-28">
+                  <h4 className="text-2xl font-bold mb-8 text-blue-500 flex items-center gap-3">
+                    <Brain className="w-6 h-6" />
+                    Designed For
+                  </h4>
+                  <div className="space-y-6">
+                    <div className="flex gap-4 items-start">
+                      <div className="w-12 h-12 rounded-xl bg-brand-orange/10 flex items-center justify-center flex-shrink-0">
+                        <span className="text-xl font-black text-brand-orange">6-10</span>
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-theme-light-heading dark:text-white mb-1">Classes 6 to 10</h5>
+                        <p className="text-sm text-theme-light-body dark:text-white/60">Complete curriculum coverage for middle and high school</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-4 items-start">
+                      <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                        <BookOpen className="w-6 h-6 text-blue-500" />
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-theme-light-heading dark:text-white mb-1">All Boards</h5>
+                        <p className="text-sm text-theme-light-body dark:text-white/60">CBSE, ICSE, and State Board aligned</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-4 items-start">
+                      <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                        <Monitor className="w-6 h-6 text-emerald-500" />
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-theme-light-heading dark:text-white mb-1">Any Space</h5>
+                        <p className="text-sm text-theme-light-body dark:text-white/60">Classrooms, math labs, or activity rooms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Quick Stats */}
+                  <div className="mt-8 pt-8 border-t border-blue-500/10">
+                    <div className="grid grid-cols-2 gap-4 text-center">
+                      <div>
+                        <div className="text-3xl font-black text-brand-orange mb-1">500+</div>
+                        <div className="text-xs text-theme-light-body dark:text-white/60 uppercase tracking-wider">Schools Trust Us</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-black text-blue-500 mb-1">75%</div>
+                        <div className="text-xs text-theme-light-body dark:text-white/60 uppercase tracking-wider">Higher Retention</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            
           )}
 
           {/* Features Tab */}

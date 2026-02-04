@@ -22,21 +22,21 @@ const AboutPage = () => {
       description: "Director, Gyansetu Global Growth Pvt. Ltd. & Waves Classes, Jalgaon | Trustee, Shikshan Prasarak Mandal | Chartered Secretary, Rotary Club of Jalgaon Green City"
     },
     {
-      name: "Sagar M. Patil",
+      name: "Er. Sagar M. Patil",
       designation: "Director",
-      qualification: "B.Tech (Information Technology), VIT",
+      qualification: "B.Tech (Information Technology), VESIT (Mumbai)",
       image: "https://res.cloudinary.com/dweebldig/image/upload/v1769421070/sagar_sir_ywruow.jpg",
       description: "Founder & Director at Spectrum Classes, Educator at Vision Classes, and Private Home Tutor in Navi Mumbai"
     },
     {
-      name: "Pushpendra Singh Rathore",
+      name: "Er. Pushpendra Singh Rathore",
       designation: "Director",
       qualification: "B.Tech (Mechanical Engineering), KNIT",
       image: "https://res.cloudinary.com/dweebldig/image/upload/v1769421600/sir_zjfntp.jpg",
       description: "Engineer & Educator with 12+ years of experience, teaching Physics, Mathematics, and Logical Reasoning for IIT-JEE, NEET, CAT, Banking, and SSC aspirants."
     },
     {
-      name: "Abhijit Balwant Patil",
+      name: "Abhijit B. Patil",
       designation: "Director",
       qualification: "M.A. in Mass Communication, B.A. (Sociology)",
       image: "https://res.cloudinary.com/dweebldig/image/upload/v1769446615/e5ab2613-d6a3-420e-b316-e35ad4e4f56c_tswzoz.jpg",

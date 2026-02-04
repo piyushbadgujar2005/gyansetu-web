@@ -31,7 +31,7 @@ export default {
         sans: ['Inter', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
         devanagari: ['"Tiro Devanagari Sanskrit"', 'serif'],
-        kalam: ['Kalam', 'cursive'],
+        kalam: ['"Tiro Devanagari Marathi"', 'serif'],
       },
     },
   },

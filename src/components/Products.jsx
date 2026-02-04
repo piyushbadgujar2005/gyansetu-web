@@ -77,7 +77,7 @@ const Products = () => {
     <section
       ref={containerRef}
       id="products"
-      className="relative w-full py-16 sm:py-24 md:py-32 lg:py-40 overflow-hidden bg-theme-light-bg dark:bg-brand-dark transition-colors duration-500"
+      className="relative w-full py-16 sm:py-24 md:py-32 lg:py-40 overflow-hidden bg-theme-light-bg dark:bg-[#1F1F1F] transition-colors duration-500"
     >
       {/* Cinematic Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -117,12 +117,12 @@ const Products = () => {
                   Math<span className="text-brand-orange">Lab</span>
                 </h3>
                 <p className="text-base md:text-lg font-medium text-brand-orange/80 italic leading-relaxed">
-                  "Seeing is believing. Experimenting is understanding."
+                  "Learn Math by Doing, Not Just Memorizing"
                 </p>
               </div>
 
               <p className="text-sm md:text-base leading-relaxed text-theme-light-body dark:text-theme-dark-body opacity-80">
-                MathLab bridges the gap between abstract theory and real-world logic. Our hands-on toolkits and digital software create a multisensory environment where students master concepts through discovery.
+                Transform math from abstract to tangible with hands-on experiments and physical models. NCERT-aligned for Classes 6–10, our MathLab reduces math anxiety and builds genuine understanding through activity-based learning.
               </p>
 
               <div className="flex flex-wrap gap-2 pt-1">
@@ -146,7 +146,7 @@ const Products = () => {
               <div className="absolute inset-0 bg-brand-orange/20 rounded-3xl blur-[60px] opacity-0 group-hover/img:opacity-100 transition-opacity duration-700" />
               <div className="relative aspect-video rounded-2xl overflow-hidden border-2 border-brand-orange/10 shadow-2xl transition-transform duration-700 group-hover/img:scale-[1.03] group-hover/img:border-brand-orange/30">
                 <img 
-                  src={mathlabFeature} 
+                  src="https://res.cloudinary.com/dweebldig/image/upload/v1770225827/mathlab_m6yknn.jpg" 
                   alt="MathLab Platform" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                 />
@@ -160,7 +160,7 @@ const Products = () => {
               <div className="absolute inset-0 bg-blue-500/20 rounded-3xl blur-[60px] opacity-0 group-hover/img:opacity-100 transition-opacity duration-700" />
               <div className="relative aspect-video rounded-2xl overflow-hidden border-2 border-blue-500/10 shadow-2xl transition-transform duration-700 group-hover/img:scale-[1.03] group-hover/img:border-blue-500/30">
                 <img 
-                  src={interactiveBoardFeature} 
+                  src="https://res.cloudinary.com/dweebldig/image/upload/v1770226670/interactiveboards_gu6luw.jpg" 
                   alt="Interactive Boards" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                 />
@@ -180,12 +180,12 @@ const Products = () => {
                   Interactive <span className="text-blue-500">Boards</span>
                 </h3>
                 <p className="text-base md:text-lg font-medium text-blue-500/80 italic leading-relaxed">
-                  "Redefining the canvas of education."
+                  "Where Technology Meets Teaching Excellence"
                 </p>
               </div>
 
               <p className="text-sm md:text-base leading-relaxed text-theme-light-body dark:text-theme-dark-body opacity-80">
-                Turn your traditional classrooms into dynamic hubs of information. Our Interactive Boards feature multi-touch technology, high-definition displays, and integrated software tailored for active student participation.
+                Upgrade your classroom with multi-touch, 4K clarity boards that make lessons interactive and engaging. Integrated teaching software enhances student participation and transforms traditional teaching into dynamic learning experiences.
               </p>
 
               <div className="flex flex-wrap gap-2 pt-1">
@@ -221,12 +221,12 @@ const Products = () => {
                   Langue <span className="text-indigo-500">Tech</span>
                 </h3>
                 <p className="text-base md:text-lg font-medium text-indigo-500/80 italic leading-relaxed">
-                  "Your ultimate bridge to Global Education."
+                  "Master English. Study Abroad. Achieve Dreams."
                 </p>
               </div>
 
               <p className="text-sm md:text-base leading-relaxed text-theme-light-body dark:text-theme-dark-body opacity-80">
-                Master English proficiency and navigate the complexities of abroad education with expert guidance. IELTS/TOEFL training and end-to-end consultation for USA, UK, Canada, and more.
+                Complete IELTS/TOEFL preparation plus expert guidance for studying abroad. From college selection to visa assistance, we help you navigate your journey to universities in USA, UK, Canada, and beyond.
               </p>
 
               <div className="flex flex-wrap gap-2 pt-1">
@@ -250,7 +250,7 @@ const Products = () => {
               <div className="absolute inset-0 bg-indigo-500/20 rounded-3xl blur-[60px] opacity-0 group-hover/img:opacity-100 transition-opacity duration-700" />
               <div className="relative aspect-video rounded-2xl overflow-hidden border-2 border-indigo-500/10 shadow-2xl transition-transform duration-700 group-hover/img:scale-[1.03] group-hover/img:border-indigo-500/30">
                 <img 
-                  src={langueTechFeature} 
+                  src="https://res.cloudinary.com/dweebldig/image/upload/v1770228242/languetech_hmebzo.png"
                   alt="Langue Tech" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover/img:scale-110"
                 />
